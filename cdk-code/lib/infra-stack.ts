@@ -27,22 +27,4 @@ export class InfraStack extends cdk.Stack {
     });
   }
 }
-   // The code that defines your stack goes here
-    
-    //If you are running on a Mac using the new M1 chip, please change `../SampleApp` to `../../SampleApp`.
-    const imageAsset = new DockerImageAsset(this, 'ImageAssets', {
-      directory: path.join(__dirname, '../SampleApp'),
-    });
-
-    const service = new apprunner.Service(this, 'Service', {
-      source: apprunner.Source.fromAsset({
-        imageConfiguration: { port: 80 },
-        asset: imageAsset
-      })
-    });
-
-    new cdk.CfnOutput(this, "apprunner-url", {
-      exportName: "apprunner-url",
-      value: service.serviceUrl,
-      description: "URL to access service"
-    });
+   
