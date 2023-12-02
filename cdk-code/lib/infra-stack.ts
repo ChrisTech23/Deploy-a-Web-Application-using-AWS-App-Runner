@@ -1,6 +1,4 @@
-import apprunner = require('@aws-cdk/aws-apprunner-alpha'); // Allows working with App Runner resources
 import { DockerImageAsset } from 'aws-cdk-lib/aws-ecr-assets'; // Allows building the docker image and uploading to ECR
-import * as path from "path"; // Helper for working with file paths
 import * as cdk from '@aws-cdk/core';
 import apprunner = require('@aws-cdk/aws-apprunner'); // Allows working with App Runner resources
 import assets = require('@aws-cdk/aws-ecr-assets'); // Allows building the docker image and uploading to ECR
